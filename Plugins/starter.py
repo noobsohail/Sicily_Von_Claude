@@ -1,5 +1,5 @@
 from Helper.helper import start_text, help_text
-from config import bot, STARTER_IMG
+from config import bot, STARTER_IMG, BOT_USERNAME
 from telethon import events
 
 class start():
@@ -23,6 +23,6 @@ class start():
     async def event_handler_source(event):
         await bot.send_message(
             event.chat_id,
-            '[Source Code On Github](https://github.com/Nobbsohail/Anime_Gallery_Bot)\n Join [IndiAnime Disucssion Group](https://t.me/indianimein)'
+            '[Source Code On Github](https://github.com/Nobbsohail/Sicily_von_Claude)\n Join [IndiAnime Disucssion Group](https://t.me/indianimein)'
         )
     

@@ -1,5 +1,5 @@
 {
-    "name": "Anime Gallery Bot",
+    "name": "Sicily Von Claude",
     "description": "Telegram Bot is for downloading any anime direclty via links in multiple quality",
     "keywords": [
       "telegram",
@@ -9,9 +9,9 @@
       "manga",
       "manga download"
     ],
-    "success_url": "https://t.me/Anime_Gallery_Robot",
-    "website": "https://github.com/MiyukiKun",
-    "repository": "https://github.com/MiyukiKun/Anime_Gallery_Bot",
+    "success_url": "https://t.me/ErzaScarlet_justice",
+    "website": "https://github.com/Noobsohail",
+    "repository": "https://github.com/noobsohail/Sicily_Von_Claude",
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
@@ -24,7 +24,23 @@
        "TG_BOT_TOKEN": {
         "description": "Your bot token, as a string. Get it from @BotFather on telegram",
         "value": ""
-      }
+      },
+      "BOT_USERNAME": {
+        "description": "Enter Bot username without @ Like ErzaScarlet_Groupbot",
+        "value": ""
+      },
+      "STARTER_IMG": {
+        "description": "STARTING MESSAGE OF GIF/img OF bot",
+        "value": "https://c.tenor.com/vIgfYyIueuoAAAAC/kenja-no-mago-sicily-von-claude.gif"
+      },
+      "ERRORS_CRY": {
+        "description": "Errors gif/image change",
+        "value": "https://media.giphy.com/media/4pk6ba2LUEMi4/giphy.gif"
+      },
+      "ANIME_NO_IMG": {
+        "description": "Aniem daame (no no ) gif change",
+        "value": "https://media1.tenor.com/images/eaac56a1d02536ed416b5a080fdf73ba/tenor.gif?itemid=15075442"
+      },
     },
     "buildpacks": [{
       "url": "heroku/python"

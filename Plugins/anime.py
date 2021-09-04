@@ -1,7 +1,7 @@
 from telethon import events, Button
 from API.gogoanimeapi import gogoanime as gogo
 import Helper.formating_results as format
-from config import bot, ANIME_NO_IMG, ERRORS_CRY
+from config import bot, ANIME_NO_IMG, ERRORS_CRY, BOT_USERNAME
 from Helper.helper_functions import *
 
 class Anime():
