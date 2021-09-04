@@ -29,7 +29,7 @@ class Anime():
             await bot.send_message(
                 event.chat_id,
                 'Command must be used like this\n/anime <name of anime>\nexample: /anime One Piece',
-                file='{ANIME_NO_IMG}'
+                file=f'{ANIME_NO_IMG}'
             )
         elif '/anime' in event.raw_text:
             text = event.raw_text.split()
@@ -48,7 +48,7 @@ class Anime():
                             bot.send_message(
                                 event.chat_id,
                                 "Name u searched for is too long",
-                                file='{ERRORS_CRY}'
+                                file=f'{ERRORS_CRY}'
                             )
                     else:
                         buttons1.append(
@@ -62,7 +62,7 @@ class Anime():
                 await bot.send_message(
                     event.chat_id,
                     'Not Found, Check for Typos or search Japanese name',
-                    file='{ERRORS_CRY}'
+                    file=f'{ERRORS_CRY}'
                 )
 
     @bot.on(events.NewMessage(pattern="/batch"))
