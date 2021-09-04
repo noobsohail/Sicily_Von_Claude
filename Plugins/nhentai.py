@@ -11,7 +11,7 @@ class Nhentai():
             await bot.send_message(
                 event.chat_id,
                 'Command must be used like this\n/nh <hentai code\nexample: /nh 339989',
-                file='{ANIME_NO_IMG}'
+                file=f'{ANIME_NO_IMG}'
             )
         elif '/nh' in event.raw_text:
             text = event.raw_text.split()
