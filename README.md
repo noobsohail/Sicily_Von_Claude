@@ -54,7 +54,7 @@ To run this project, you will need to add the following environment variables to
 
 ### Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/MiyukiKun/Anime_Gallery_Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://github.com/noobsohail/Sicily_Von_Claude)
 
 *Note that this wont work for now yet to add app.json file to the repo  
 
