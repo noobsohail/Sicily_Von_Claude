@@ -11,7 +11,7 @@ class indianimeapi():
         response_html = response.text
         soup = BeautifulSoup(response_html, 'lxml')
         page_count = soup.find("h1", class_="elementor-post__title").text
-        img_link = soup.find("div", id= "elementor-post__thumbnail elementor-fit-height").img
+        img_link = soup.find("div", class= "elementor-post__thumbnail.elementor-fit-height").img
         img_link_skeleton = img_link["src"].split("/")
         list_of_pages = []
         for i in range(int(page_count)):
