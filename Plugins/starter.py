@@ -19,7 +19,7 @@ class start():
             help_text
             )
 
-    @bot.on(events.NewMessage(pattern="/source"))
+    @bot.on(events.NewMessage(pattern="/repo"))
     async def event_handler_source(event):
         await bot.send_message(
             event.chat_id,
