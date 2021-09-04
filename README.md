@@ -38,7 +38,7 @@ This Bot have some awesome features listed below everything add free
   
 ## Bot 
 
-You can find our bot on Telegram by [@Anime_Gallery_Robot](https://t.me/anime_gallery_robot).
+You can find our bot on Telegram by [@{BOT_USERNAME}](https://t.me/anime_gallery_robot).
   
 ## Environment Variables
 
@@ -59,7 +59,7 @@ To run this project, you will need to add the following environment variables to
 *Note that this wont work for now yet to add app.json file to the repo  
 
 ## Support
-To report any problems, bugs, suggestions visit [@Anime_Gallery_Robot_Support](https://t.me/anime_gallery_robot_support).
+To report any problems, bugs, suggestions visit [@{BOT_USERNAME}_Support](https://t.me/anime_gallery_robot_support).
 
 Easier to contact me there than through github
 

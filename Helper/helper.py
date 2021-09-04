@@ -1,6 +1,8 @@
 start_text = '''This bot is for downloading any anime direclty via links in multiple quality
                 
-Use /help to know commands and how to use this bot'''
+Use /help to know commands and how to use this bot
+[Note: This bot current manage and host by IndiAnime](https://t.me/indianimein)
+'''
 
 help_text = '''List of commands:
 /anime <name of anime you want> : to download any anime by search
@@ -22,4 +24,4 @@ The links provided are in multiple qualities to download just open links in chro
                 
 I suggest open the links in **1DM** app on playstore instead of chrome for easy downloading
                 
-To report any Problems, Bugs, Suggestions go to @Anime_Gallery_Robot_Updates'''
+To report any Problems, Bugs, Suggestions go to @ErzaScarlet_Justice'''

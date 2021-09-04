@@ -1,7 +1,7 @@
 from telethon import events, Button
 from API.gogoanimeapi import gogoanime as gogo
 import Helper.formating_results as format
-from config import bot
+from config import bot, ANIME_NO_IMG, ERRORS_CRY
 from Helper.helper_functions import *
 
 class Anime():
@@ -23,13 +23,13 @@ class Anime():
             buttons=buttonss
             )
 
-    @bot.on(events.NewMessage(pattern=r"^/anime|^/anime@Anime_Gallery_Robot"))
+    @bot.on(events.NewMessage(pattern=r"^/anime|^/anime@{BOT_USERNAME}"))
     async def event_handler_anime(event):
         if '/anime' == event.raw_text:
             await bot.send_message(
                 event.chat_id,
                 'Command must be used like this\n/anime <name of anime>\nexample: /anime One Piece',
-                file='https://media1.tenor.com/images/eaac56a1d02536ed416b5a080fdf73ba/tenor.gif?itemid=15075442'
+                file='{ANIME_NO_IMG}'
             )
         elif '/anime' in event.raw_text:
             text = event.raw_text.split()
@@ -48,7 +48,7 @@ class Anime():
                             bot.send_message(
                                 event.chat_id,
                                 "Name u searched for is too long",
-                                file='https://media.giphy.com/media/4pk6ba2LUEMi4/giphy.gif'
+                                file='{ERRORS_CRY}'
                             )
                     else:
                         buttons1.append(
@@ -62,13 +62,13 @@ class Anime():
                 await bot.send_message(
                     event.chat_id,
                     'Not Found, Check for Typos or search Japanese name',
-                    file='https://media.giphy.com/media/4pk6ba2LUEMi4/giphy.gif'
+                    file='{ERRORS_CRY}'
                 )
 
     @bot.on(events.NewMessage(pattern="/batch"))
     async def event_handler_batch(event):
         if event.chat_id < 0:
-            await event.reply("If you want to download in batch contact me in pm\n@Anime_Gallery_Robot")
+            await event.reply("If you want to download in batch contact me in pm\n@{BOT_USERNAME}")
             return
         try:
             text = event.raw_text.split()
@@ -86,7 +86,7 @@ class Anime():
                         break
 
         except:
-            await event.reply("Something went wrong.....\nCheck if you entered command properly\n\nUse /help or go to \n@Anime_Gallery_Robot_Support if you have any doubts")
+            await event.reply("Something went wrong.....\nCheck if you entered command properly\n\nUse /help or go to \n@{BOT_USERNAME}_Support if you have any doubts")
 
     @bot.on(events.NewMessage(pattern="/download"))
     async def event_handler_batch(event):
@@ -113,7 +113,7 @@ class Anime():
             )
 
         except:
-            await event.reply("Something went wrong.....\nCheck if you entered command properly\n\nUse /help or go to \n@Anime_Gallery_Robot_Support if you have any doubts")         
+            await event.reply("Something went wrong.....\nCheck if you entered command properly\n\nUse /help")         
 
     @bot.on(events.CallbackQuery(pattern=b"lt:"))
     async def callback_for_latest(event):
