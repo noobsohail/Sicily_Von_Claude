@@ -9,7 +9,7 @@ class start():
         await bot.send_message(
             event.chat_id,
             start_text,
-            file='{STARTER_IMG}'
+            file=f'{STARTER_IMG}'
         )
 
     @bot.on(events.NewMessage(pattern=r"^/help$|^/help@{BOT_USERNAME}"))
