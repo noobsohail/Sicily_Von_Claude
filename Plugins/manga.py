@@ -8,14 +8,14 @@ class Manga():
 
     @bot.on(events.NewMessage(pattern=r"^/searchmanga|^/searchmanga@{BOT_USERNAME}"))
     async def event_handler_manga(event):
-        if '/manga' == event.raw_text:
+        if '/searchmanga' == event.raw_text:
             await bot.send_message(
                 event.chat_id,
-                'Command must be used like this\n/manga <name of manga>\nexample: /manga One Piece',
+                'Command must be used like this\n/searchmanga <name of manga>\nexample: /searchmanga One Piece',
                 file=f'{ANIME_NO_IMG}'
             )
 
-        elif '/manga' in event.raw_text:
+        elif '/searchmanga' in event.raw_text:
             text = event.raw_text.split()
             text.pop(0)
             manga_name = " ".join(text)

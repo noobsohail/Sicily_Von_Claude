@@ -25,13 +25,13 @@ class Anime():
 
     @bot.on(events.NewMessage(pattern=r"^/search|^/search@{BOT_USERNAME}"))
     async def event_handler_anime(event):
-        if '/anime' == event.raw_text:
+        if '/search' == event.raw_text:
             await bot.send_message(
                 event.chat_id,
-                'Command must be used like this\n/anime <name of anime>\nexample: /anime One Piece',
+                'Command must be used like this\n/search <name of search>\nexample: /search One Piece',
                 file=f'{ANIME_NO_IMG}'
             )
-        elif '/anime' in event.raw_text:
+        elif '/search' in event.raw_text:
             text = event.raw_text.split()
             text.pop(0)
             anime_name = " ".join(text)
