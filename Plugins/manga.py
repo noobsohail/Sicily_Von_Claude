@@ -12,7 +12,7 @@ class Manga():
             await bot.send_message(
                 event.chat_id,
                 'Command must be used like this\n/manga <name of manga>\nexample: /manga One Piece',
-                file='{ANIME_NO_IMG}'
+                file=f'{ANIME_NO_IMG}'
             )
 
         elif '/manga' in event.raw_text:
@@ -24,7 +24,7 @@ class Manga():
                 await bot.send_message(
                     event.chat_id,
                     'Not Found, Check for Typos or search Japanese name',
-                    file='{ERRORS_CRY}'
+                    file=f'{ERRORS_CRY}'
                 )
             else:
                 try:
