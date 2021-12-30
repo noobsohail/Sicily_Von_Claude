@@ -10,7 +10,7 @@ class gogoanime():
 
     def get_search_results(query):
         try:
-            url1 = f"https://gogoanime.ai//search.html?keyword={query}"
+            url1 = f"https://gogoanime.wiki//search.html?keyword={query}"
             session = HTMLSession()
             response = session.get(url1)
             response_html = response.text
@@ -31,7 +31,7 @@ class gogoanime():
 
     def get_anime_details(animeid):
         try:
-            animelink = 'https://gogoanime.ai/category/{}'.format(animeid)
+            animelink = 'https://gogoanime.wiki/category/{}'.format(animeid)
             response = requests.get(animelink)
             plainText = response.text
             soup = BeautifulSoup(plainText, "lxml")
@@ -70,14 +70,14 @@ class gogoanime():
 
     def get_episodes_link(animeid, episode_num):
         try:
-            animelink = f'https://gogoanime.ai/category/{animeid}'
+            animelink = f'https://gogoanime.wiki/category/{animeid}'
             response = requests.get(animelink)
             plainText = response.text
             soup = BeautifulSoup(plainText, "lxml")
             lnk = soup.find(id="episode_page")
             source_url = lnk.find("li").a
             tit_url = soup.find("div", {"class": "anime_info_body_bg"}).h1.string
-            URL_PATTERN = 'https://gogoanime.ai/{}-episode-{}'
+            URL_PATTERN = 'https://gogoanime.wiki/{}-episode-{}'
             url = URL_PATTERN.format(animeid, episode_num)
             srcCode = requests.get(url)
             plainText = srcCode.text
@@ -118,7 +118,7 @@ class gogoanime():
     
     def get_home_page():
         try:
-            url = 'https://gogoanime.ai'
+            url = 'https://gogoanime.wiki'
             session = HTMLSession()
             response = session.get(url)
             response_html = response.text
@@ -138,7 +138,7 @@ class gogoanime():
             return {"status":"404", "reason":"Check the host's network Connection"}
     
     def jugad(animeid, episode_num):
-        url = f"https://www1.gogoanime.ai/{animeid}-episode-{episode_num}"
+        url = f"https://www1.gogoanime.wiki/{animeid}-episode-{episode_num}"
         headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 
         response = requests.get(url, headers=headers)

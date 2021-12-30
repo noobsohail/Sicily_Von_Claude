@@ -9,7 +9,7 @@ class kissmangaapi():
 
     def get_search_results(query):  # returns list of tuples cotaining name of manga and its id [(name1, id1), (name2, id2)]
         try:
-            url = f"http://kissmanga.nl/search?q={query}"
+            url = f"http://kissinganime.icu/search?q={query}"
             response = requests.get(url)
             response_html = response.text
             soup = BeautifulSoup(response_html, 'lxml')
@@ -31,7 +31,7 @@ class kissmangaapi():
        
     def get_manga_details(mangaid):  # returns list of [Name of manga, Display-image link, list of genres, latest chapter number]
         try:
-            url = f"http://kissmanga.nl/manga/{mangaid}"
+            url = f"http://kissinganime.icu/manga/{mangaid}"
             response = requests.get(url)
             response_html = response.text
             soup = BeautifulSoup(response_html, 'lxml')
@@ -54,7 +54,7 @@ class kissmangaapi():
 
     def get_manga_chapter(mangaid, chapternum):  # returns list of image links of pages of full chapter [imglink1, imglink2, full chapter]
         try:
-            url = f"http://kissmanga.nl/{mangaid}-chapter-{chapternum}"
+            url = f"http://kissinganime.icu/{mangaid}-chapter-{chapternum}"
             response = requests.get(url)
             response_html = response.text
             soup = BeautifulSoup(response_html, 'lxml')
